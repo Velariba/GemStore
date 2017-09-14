@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="storeStore">
+
+<head>
+    <!--  <meta charset="utf-8">
+				<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>Gem Store</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="author" href="humans.txt"> -->
+    <link rel="stylesheet" type="text/css" href="bootstrap.min (2).css" />
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="prod.js"></script>
+</head>
+
+<body class="list-group" ng-controller="StoreController as store">
+    <header>
+        <h1 class="text-center">My Own Crafted Gems</h1>
+        <h2 class="text-center">- an Angular store -</h2>
+    </header>
+    <div class="list-group-item" ng-repeat="product in store.products | orderBy:'name'">
+        <product-title></product-title>
+        <!-- Image Gallery  -->
+        <product-gallery></product-gallery>
+        
+        <product-panels></product-panels>
+    </div>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>
